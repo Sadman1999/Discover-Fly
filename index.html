@@ -26,16 +26,14 @@
 </head>
 
 <body>
-    
-
-    <!--Booking Section-->
-    <main class="main-content container">
-        <div class="booking-form">
-            <h3>Booking Flights</h3>
-            <div class="input-group">
-                <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
-            </div>
+    <section class="Booking Section">
+        <main class="main-content container">
+            <div class="booking-form">
+                <h3>Booking Flights</h3>
+                <div class="input-group">
+                    <label for="">Flying From</label>
+                    <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+                </div>
             <div class="input-group">
                 <label for="">Flying To</label>
                 <input class="inp-style" type="text" name="" placeholder="New York, United States">
@@ -52,11 +50,13 @@
             </div>
             <div class="input-group f-class">
                 <div>
-                    <label for="">First Class ($150)</label>
+                    <label id="case-count">First Class ($150)</label>
                     <input class="inp-style inp-width" type="number" name="">
                 </div>
-                <div class="plus-minus-btn">
-                    <p>+ -</p>
+                <div id="case-increase" class="plus-minus-btn">
+                    <button class="plus-minus-btn">+</button>
+                    <button class="plus-minus-btn">-</button>
+                    <!-- <p>+ -</p> -->
                 </div>
             </div>
             
@@ -66,7 +66,8 @@
                     <input class="inp-style inp-width" type="number" name="">
                 </div>
                 <div class="plus-minus-btn">
-                    <p> <span>+</span> <span>-</span> </p>
+                    <button class="plus-minus-btn">+</button>
+                    <button class="plus-minus-btn">-</button>
                 </div>
             </div>
             <div class="calculations">
@@ -105,8 +106,12 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
     </section>
-
-    <!--Thank You-->
+    <script>
+        document.getElementById('case-increase').addEventListener('click', function (){
+            const caseInput = document.getElementById('case-count');
+            console.log(caseInput.value);
+        })
+    </script>
 </body>
 
 </html>
